@@ -4,4 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Huvudmeny.unity
+    guid: 3bce4b7ef7e3f4748b1f82bc0ebb7048
+  - enabled: 1
+    path: Assets/EnskildLista.unity
+    guid: fc937b76add00ba4ebe4a3296f8d392f
+  - enabled: 1
+    path: Assets/Familjen.unity
+    guid: 556759c9ae5f4f5469d426a8043ddbd9
+  - enabled: 1
+    path: Assets/Prispall.unity
+    guid: fb9cb496b4d9a4a43be9a0ed578e1ecd
