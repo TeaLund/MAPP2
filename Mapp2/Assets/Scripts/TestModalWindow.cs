@@ -8,7 +8,7 @@ public class TestModalWindow : MonoBehaviour {
 
     private ModalPanel modalPanel;
     private DisplayManager displayManager;
-    private InputField input;
+    public InputField input;
 
     private UnityAction myOkAction;
     private UnityAction myExitAction;
