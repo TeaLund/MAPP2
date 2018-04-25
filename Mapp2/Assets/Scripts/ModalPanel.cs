@@ -7,8 +7,10 @@ public class ModalPanel : MonoBehaviour {
 
     public Text question;
     public Button okButton;
-    public Button exitButton;
+    public Button cancelButton;
     public GameObject modalPanelObject;
+    public InputField input;
+    
 
     private static ModalPanel modalPanel;
 
@@ -32,14 +34,14 @@ public class ModalPanel : MonoBehaviour {
         okButton.onClick.AddListener(okEvent);
         okButton.onClick.AddListener(ClosePanel);
 
-        exitButton.onClick.RemoveAllListeners();
-        exitButton.onClick.AddListener(exitEvent);
-        exitButton.onClick.AddListener(ClosePanel);
+        cancelButton.onClick.RemoveAllListeners();
+        cancelButton.onClick.AddListener(exitEvent);
+        cancelButton.onClick.AddListener(ClosePanel);
 
         this.question.text = question;
 
         okButton.gameObject.SetActive(true);
-        exitButton.gameObject.SetActive(true);
+        cancelButton.gameObject.SetActive(true);
     }
 
     void ClosePanel()

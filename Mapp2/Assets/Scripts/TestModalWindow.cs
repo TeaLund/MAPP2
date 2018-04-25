@@ -8,6 +8,7 @@ public class TestModalWindow : MonoBehaviour {
 
     private ModalPanel modalPanel;
     private DisplayManager displayManager;
+    private InputField input;
 
     private UnityAction myOkAction;
     private UnityAction myExitAction;
@@ -24,17 +25,18 @@ public class TestModalWindow : MonoBehaviour {
     // Send to the modal panel to set up the buttons and functions to call
     public void TestOE()
     {
-        modalPanel.Choice("Fina knappar.\nVad tycker du?",myOkAction,myExitAction);
+        modalPanel.Choice("Skriv något.",myOkAction,myExitAction);
     }
 
 
     void TestOkFunction()
     {
-        displayManager.DisplayMessage("Ja okej");
+        displayManager.DisplayMessage(input.text);
+        input.text = "";
     }
 
     void TestExitFunction()
     {
-        displayManager.DisplayMessage("Ut försvinn");
+        displayManager.DisplayMessage("Eller inte?");
     }
 }
