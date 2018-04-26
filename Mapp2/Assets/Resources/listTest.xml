@@ -1,0 +1,19 @@
+<List_menu>
+<list>
+	<name>My List</name>
+	<icon>1</icon>
+	<task>
+		<description>Städa</description>
+		<stars>4</stars>
+		<is_finished>0</is_finished>
+	</task>
+	<task>
+		<description>Tvätta</description>
+		<stars>3</stars>
+		<is_finished>1</is_finished>
+	</task>
+</list>
+<list>
+	<name>Also my List</name>
+	<icon>2</icon>
+</list>
