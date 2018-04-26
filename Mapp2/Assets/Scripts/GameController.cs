@@ -6,13 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {    
 	
-	void Start () {
-		
-	}	
-	
-	void Update () {
-		
-	}
 
     public void CreateListObject(string namn)
     {
