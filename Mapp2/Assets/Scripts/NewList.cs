@@ -2,44 +2,73 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
-public class NewList : MonoBehaviour {
-    public InputField input;
+public class NewList : MonoBehaviour
+{
+    private string listsURL = "http://localhost/family_chores/InsertList.php";
 
-    private ModalPanel modalPanel;
+    //Add stepTwo later on...
+    public GameObject stepOne/*, stepTwo*/;
 
-    private UnityAction okAction;
-    private UnityAction cancelAction;
+    private string listName;
+    //private int iconNumber;
+
+    private bool stepOneActive = true;
+    //private bool stepTwoActive = false;
+
+    private InputField input;
+
+    public void ToggleStepOne()
+    {
+        stepOneActive = !stepOneActive;
+
+        gameObject.SetActive(stepOneActive);
+    }
+
+    /*public void ToggleStepTwo()
+    {
+        stepTwoActive = !stepTwoActive;
+        
+        gameObject.SetActive(stepTwoActive);
+    }*/
 
     private void Awake()
     {
-        modalPanel = ModalPanel.Instance();
-
-        okAction = new UnityAction(ok);
-        cancelAction = new UnityAction(cancel);
+        input = gameObject.GetComponentInChildren<InputField>();
+        input.onEndEdit.AddListener(InputFieldListener);
     }
 
-    // Send to the modal panel to set up the buttons and functions to call
-    public void newList()
+    public void InputFieldListener(string inputText)
     {
-        modalPanel.Choice("Vad ska listan heta?", okAction, cancelAction);
+        listName = inputText;
     }
 
-
-    void ok()
+    public void ConfirmButton()
     {
-        // använd input.text här
-        print(input.text);
-        input.text = "";
-        // aktivera nästa popup
+        StartCoroutine(CreateNewList());
     }
 
-
-    void cancel()
+    public void ClearInputField()
     {
-        print("Cancelled");
+        input.text = null;
+        Debug.Log("InputField cleared!");
     }
 
+    private IEnumerator CreateNewList()
+    {
+        Debug.Log("CreateNewList: " + listName);
+
+        WWWForm listForm = new WWWForm();
+        listForm.AddField("listNamePost", listName);
+        //listForm.AddField("iconNumberPost", iconNumber);
+
+        WWW listData = new WWW(listsURL, listForm);
+        yield return listData;
+
+        //Calls on ToggleNewListPanel() in MenuController.cs. Change this after adding stepTwo...
+        gameObject.transform.parent.parent.GetComponent<MenuController>().ToggleNewListPanel();
+    }
+
+    //Add more methods for stepTwo later on...
 
 }

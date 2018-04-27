@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Huvudmeny.unity
-    guid: 3bce4b7ef7e3f4748b1f82bc0ebb7048
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4eeeb53f535f9414daab385f133edc2c
   - enabled: 1
     path: Assets/Scenes/EnskildLista.unity
     guid: fc937b76add00ba4ebe4a3296f8d392f
@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prispall.unity
     guid: fb9cb496b4d9a4a43be9a0ed578e1ecd
+  - enabled: 0
+    path: Assets/Scenes/Huvudmeny.unity
+    guid: 3bce4b7ef7e3f4748b1f82bc0ebb7048

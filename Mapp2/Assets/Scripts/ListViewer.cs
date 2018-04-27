@@ -18,14 +18,14 @@ public class ListViewer : MonoBehaviour {
 
     public void Display()
     {
-        foreach (ListEntry list in XMLManager.man.listDat.listOflists)
+        /*foreach (ListEntry list in XMLManager.man.listDat.listOflists)
         {
             //GameObject newList = Instantiate(listPrefab, this.transform);
             //ListObj lo = newList.GetComponent<ListObj>();
 
             //newList.transform.SetParent(transform, false);
             //lo.Display(list);
-        }
+        }*/
 
     }
 }

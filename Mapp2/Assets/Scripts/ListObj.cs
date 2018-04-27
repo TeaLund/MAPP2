@@ -7,11 +7,11 @@ public class ListObj : MonoBehaviour {
 //    public string name;
 //    public int iconNumb;
 
-    public Text name, iconNumb;
+    public Text text, iconNumb;
 
     public void Display(ListEntry list)
     {
-        name.text = list.listName;
+        text.text = list.listName;
         iconNumb.text = list.listIconNumb.ToString();
     }
 }
