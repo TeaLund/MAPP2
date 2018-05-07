@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Task {
-    public string description;
-    public int stars;
-    public int taskIconNumb;
+public class Task : MonoBehaviour
+{
+
+    public int taskID;
+    public int listID;
+    public string taskName;
+    public int numberOfPoints;
+    public int iconNumber;
+
 }

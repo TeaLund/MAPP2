@@ -11,17 +11,26 @@ public class MenuController : MonoBehaviour
 
     public GameObject exitPromptPanel;
     public GameObject newListPanel;
+    public GameObject newTaskPanel;
 
     private bool buttonsEnabled = true;
     private bool exitPromptPanelActive = false;
     private bool newListPanelActive = false;
+    private bool newTaskPanelActive = false;
 
     private void Update()
     {
         //Change this later on so that pressing the back-key while having a window open, closes that window instead.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ToggleExitPromptPanel();
+            if (SceneManager.GetActiveScene().Equals(SceneManager.GetSceneByName("MainMenu")))
+            {
+                ToggleExitPromptPanel();
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 
@@ -40,6 +49,14 @@ public class MenuController : MonoBehaviour
 
         //Clears the input field
         newListPanel.GetComponentInChildren<NewList>().ClearInputField();
+
+        ToggleButtons();
+    }
+
+    public void ToggleNewTaskPanel()
+    {
+        newTaskPanelActive = !newTaskPanelActive;
+        newTaskPanel.SetActive(newTaskPanelActive);
 
         ToggleButtons();
     }
