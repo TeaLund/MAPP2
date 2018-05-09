@@ -6,12 +6,10 @@ using UnityEngine.UI;
 public class ListDisplay : MonoBehaviour {
 
     public List list;
-
     public Text nameText;
-
     public Image iconImage;
 
-    private void Start()
+    private void Update()
     {
         list = GetComponent<List>();
 

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlacementScene.unity
     guid: 098ef294d386c6a44a6ee2e515441d3f
+  - enabled: 1
+    path: Assets/Scenes/ListScene.unity
+    guid: 32a3cb252ee04b84f9fe542f454cc2e4
   - enabled: 0
     path: Assets/Scenes/Familjen.unity
     guid: 556759c9ae5f4f5469d426a8043ddbd9

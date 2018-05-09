@@ -51,13 +51,10 @@ public class NewList : MonoBehaviour
     public void ClearInputField()
     {
         input.text = null;
-        Debug.Log("InputField cleared!");
     }
 
     private IEnumerator CreateNewList()
     {
-        Debug.Log("CreateNewList: " + listName);
-
         WWWForm listForm = new WWWForm();
         listForm.AddField("listNamePost", listName);
         //listForm.AddField("iconNumberPost", iconNumber);
@@ -66,7 +63,9 @@ public class NewList : MonoBehaviour
         yield return listData;
 
         //Calls on ToggleNewListPanel() in MenuController.cs. Change this after adding stepTwo...
-        gameObject.transform.parent.parent.GetComponent<MenuController>().ToggleNewListPanel();
+        //gameObject.transform.parent.parent.GetComponent<MenuController>().ToggleNewListPanel();
+
+        StartCoroutine(GameObject.FindGameObjectWithTag("ListLoader").GetComponent<ListLoader>().LoadList(listName));
     }
 
     //Add more methods for stepTwo later on...
