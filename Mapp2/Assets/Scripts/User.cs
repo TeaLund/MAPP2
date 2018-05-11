@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class User : MonoBehaviour {
 
-    public int score;
- //   public Image avatar;
-
-    public User(string n)
-    {
-        name = n;
-        score = 0;
-    }
-
-	    
+    public int userID;
+    public string userName;
+    public int userIconNumber;
+    public int userPoints;
 }
