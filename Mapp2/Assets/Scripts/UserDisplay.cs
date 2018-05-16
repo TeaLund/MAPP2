@@ -17,9 +17,9 @@ public class UserDisplay : MonoBehaviour {
         pointsText.text = user.userPoints.ToString();
         iconImage.sprite = icons[user.userIconNumber];
 
-        print(user.userID);
-        print(user.userName);
-        print(user.userIconNumber);
-        print(user.userPoints);
+        //print(user.userID);
+        //print(user.userName);
+        //print(user.userIconNumber);
+        //print(user.userPoints);
     }
 }

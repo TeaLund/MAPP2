@@ -17,11 +17,22 @@ public class UserLoader : MonoBehaviour {
 
         string userDataString = userData.text;
 
+
+
         users = userDataString.Split(';').Select(x => x.Split('|')).ToArray();
 
         print("antal users: "+users.Length);
 
         UpdateList();
+        
+    }
+
+    public void SortByPoints()
+    {
+        for(int i = 0; i < users.Length; i++)
+        {
+
+        }
     }
 
     public void UpdateList()
@@ -31,10 +42,10 @@ public class UserLoader : MonoBehaviour {
         for (int i = 0; i < users.Length; i++)
         //for (int i = 0; i < users.GetLength(0) - 1; i++)
         {
-            print(users[i][0]);
-            print(users[i][1]);
-            print(users[i][2]);
-            print(users[i][3]);
+            //print(users[i][0]);
+            //print(users[i][1]);
+            //print(users[i][2]);
+            //print(users[i][3]);
             newObj = (GameObject)Instantiate(userPrefab, transform);
 
             User newObjUser = newObj.GetComponent<User>();
