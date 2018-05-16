@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UserIconSelected : MonoBehaviour {
 
     public Button[] icons = new Button[10];
+    [HideInInspector]
     public int index;
 
 	// Use this for initialization

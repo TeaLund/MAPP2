@@ -13,6 +13,7 @@ public class NewUser : MonoBehaviour {
     //private string url = "http://localhost/MAPP2_Users/InsertUser.php";
     private string url = "https://people.dsv.su.se/~nial0165/MAPP/InsertUser.php";
     private UserIconSelected iconSelected;
+    public UserLoader listUpdate;
 
     // Use this for initialization
     void Start () {
@@ -42,6 +43,7 @@ public class NewUser : MonoBehaviour {
         inputIcon = iconSelected.index;
         CreateUser(name, inputIcon);
         newUserPanel.SetActive(false);
+        listUpdate.UpdateList();
     }
 
     public void CreateUser(string name, int icon)

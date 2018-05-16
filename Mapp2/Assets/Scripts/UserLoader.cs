@@ -19,9 +19,14 @@ public class UserLoader : MonoBehaviour {
 
         users = userDataString.Split(';').Select(x => x.Split('|')).ToArray();
 
-        GameObject newObj;
-
         print("antal users: "+users.Length);
+
+        UpdateList();
+    }
+
+    public void UpdateList()
+    {
+        GameObject newObj;
 
         for (int i = 0; i < users.Length; i++)
         //for (int i = 0; i < users.GetLength(0) - 1; i++)
