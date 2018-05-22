@@ -32,14 +32,18 @@ public class StarSelect : MonoBehaviour {
     {
         for (int i = 0; i < stars.Length; i++)
         {
-            if(i <= index)
-            stars[i].isOn = true;
+            if (i <= index)
+            {
+                stars[i].isOn = true;
+                // Debug.Log("Star " + i + ": " + stars[i].isOn);
+            }
             else
+            {
                 stars[i].isOn = false;
+            }
         }
-
-        Debug.Log(index);
+        //Debug.Log(index);
         points = index + 1;
-        Debug.Log(points);
+        //Debug.Log(points);
     } 
 }

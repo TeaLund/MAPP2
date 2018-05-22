@@ -885,9 +885,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepOne: {fileID: 1257737987}
-  stepTwo: {fileID: 329510085}
+  stepTwo: {fileID: 1346115150}
   stepOneInput: {fileID: 1332370098}
-  stepTwoInput: {fileID: 293694087}
+  stepTwoInput: {fileID: 1726991660}
 --- !u!114 &209509672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 769775490}
   m_Direction: 0
   m_Value: 0.5
-  m_Size: 0.9844291
+  m_Size: 0.98303944
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4149,7 +4149,7 @@ GameObject:
   - component: {fileID: 1726991661}
   - component: {fileID: 1726991660}
   m_Layer: 0
-  m_Name: Panel
+  m_Name: Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4163,7 +4163,7 @@ RectTransform:
   m_GameObject: {fileID: 1726991658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.73793364, y: 0.7379337, z: 0.7379337}
   m_Children:
   - {fileID: 1243153779}
   - {fileID: 1503816472}
@@ -4175,7 +4175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000089578425}
+  m_AnchoredPosition: {x: 0, y: -93}
   m_SizeDelta: {x: 300, y: 1319.674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1726991660
@@ -4195,6 +4195,7 @@ MonoBehaviour:
   - {fileID: 199772636}
   - {fileID: 1830129155}
   - {fileID: 819442470}
+  points: 1
 --- !u!114 &1726991661
 MonoBehaviour:
   m_ObjectHideFlags: 0

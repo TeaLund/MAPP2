@@ -19,12 +19,6 @@ public class NewUser : MonoBehaviour {
     void Start () {
         iconSelected = iconArray.GetComponent<UserIconSelected>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space)) CreateUser(inputName.text, inputIcon);
-		
-	}
 
     public void OpenUserPanel()
     {
