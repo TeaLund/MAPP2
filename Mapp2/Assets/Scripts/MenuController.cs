@@ -78,12 +78,12 @@ public class MenuController : MonoBehaviour
 
     public void LoadFamilyScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void LoadPlacementScene()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
     public void QuitApplication()

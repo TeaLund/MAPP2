@@ -6,6 +6,7 @@ public class OpenEditUserMenu : MonoBehaviour {
 
     //public EditUser editUser;
     public GameObject editPanel;
+    public GameObject bakgroundPanel;
     //public int userID;
     //public string userName;
     //public int userIcon;
@@ -14,6 +15,7 @@ public class OpenEditUserMenu : MonoBehaviour {
     private void Start()
     {
         //editUser = transform.GetComponent<EditUser>();
+        bakgroundPanel.SetActive(false);
         editPanel.SetActive(false);
     }
 
@@ -22,6 +24,7 @@ public class OpenEditUserMenu : MonoBehaviour {
         //print("OpenEditUserMenu " + userID + " " + userName + " " + userIcon + " " + userPoints);
 
         editPanel.transform.GetComponent<EditUser>().FillInfo(userID, userName, userIcon, userPoints);
+        bakgroundPanel.SetActive(true);
         editPanel.SetActive(true);
     }
 }

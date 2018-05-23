@@ -8,10 +8,7 @@ public class EditUser : MonoBehaviour {
     public InputField inputName;
     public GameObject editUserPanel;
     public GameObject iconArray;
-
-    //TEST
-    public WWW echo;
-    //TEST
+    public GameObject bakgroundPanel;
 
     //[HideInInspector]
     public int id;
@@ -24,7 +21,8 @@ public class EditUser : MonoBehaviour {
     public GameObject listUpdate;
     //public UserUpdate update;
 
-    private string url = "https://people.dsv.su.se/~nial0165/MAPP/UpdateUser.php";
+    private string EditUrl = "https://people.dsv.su.se/~nial0165/MAPP/UpdateUser.php";
+    private string RemoveUrl = "https://people.dsv.su.se/~nial0165/MAPP/RemoveUser.php";
 
     private void Start()
     {
@@ -69,11 +67,25 @@ public class EditUser : MonoBehaviour {
         print("EditUser " + id + userName + inputIcon + points);
         listUpdate.GetComponent<UserUpdate>().UpdateUserOffline(id, userName, inputIcon, points);
 
+        bakgroundPanel.SetActive(false);
         editUserPanel.SetActive(false);
     }
 
     public void CloseButton()
     {
+        bakgroundPanel.SetActive(false);
+        editUserPanel.SetActive(false);
+    }
+
+    public void RemoveButton()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("IDPost", id);
+
+        WWW www = new WWW(RemoveUrl, form);
+
+        StartCoroutine(listUpdate.GetComponent<UserLoader>().UpdateList());
+        bakgroundPanel.SetActive(false);
         editUserPanel.SetActive(false);
     }
 
@@ -85,7 +97,7 @@ public class EditUser : MonoBehaviour {
         form.AddField("iconPost", icon);
         form.AddField("pointsPost", points);
 
-        WWW www = new WWW(url, form);
+        WWW www = new WWW(EditUrl, form);
 
     }
 

@@ -8,6 +8,7 @@ public class NewUser : MonoBehaviour {
     public InputField inputName;
     public GameObject newUserPanel;
     public GameObject iconArray;
+    public GameObject bakgroundPanel;
     public int inputIcon;
 
     //private string url = "http://localhost/MAPP2_Users/InsertUser.php";
@@ -22,12 +23,14 @@ public class NewUser : MonoBehaviour {
 
     public void OpenUserPanel()
     {
+        bakgroundPanel.SetActive(true);
         newUserPanel.SetActive(true);
     }
 
     public void CloseUserPanel()
     {
         inputName.text = "";
+        bakgroundPanel.SetActive(false);
         newUserPanel.SetActive(false);
     }
 
@@ -36,8 +39,9 @@ public class NewUser : MonoBehaviour {
         string name = inputName.text;
         inputIcon = iconSelected.index;
         CreateUser(name, inputIcon);
-        newUserPanel.SetActive(false);
         listUpdate.UpdateList();
+        bakgroundPanel.SetActive(false);
+        newUserPanel.SetActive(false);
     }
 
     public void CreateUser(string name, int icon)
