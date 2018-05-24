@@ -18,10 +18,7 @@ public class MenuController : MonoBehaviour
     private bool exitPromptPanelActive;
     private bool newListPanelActive;
     private bool newTaskPanelActive;
-<<<<<<< HEAD
     private bool completePanelActive;
-=======
->>>>>>> ef70e260fec69b2c34a692b9a411fd40035b4fdc
 
     private void Awake()
     {
@@ -29,12 +26,8 @@ public class MenuController : MonoBehaviour
         exitPromptPanelActive = false;
         newListPanelActive = false;
         newTaskPanelActive = false;
-<<<<<<< HEAD
         completePanelActive = false;
     }
-=======
-}
->>>>>>> ef70e260fec69b2c34a692b9a411fd40035b4fdc
 
     private void Update()
     {

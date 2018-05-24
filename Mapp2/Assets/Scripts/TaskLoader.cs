@@ -14,7 +14,7 @@ public class TaskLoader : MonoBehaviour {
         WWWForm taskForm = new WWWForm();
         taskForm.AddField("listIDPost", PlayerPrefs.GetInt("ID"));
 
-        WWW getTask = new WWW("https://people.dsv.su.se/~nial0165/MAPP/GetTask.php", taskForm);
+        WWW getTask = new WWW("http://localhost/family_chores/GetTask.php", taskForm);
         yield return getTask;
 
         string tasksDataString = getTask.text;
