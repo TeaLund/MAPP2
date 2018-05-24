@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NewList : MonoBehaviour
 {
-    private string listsURL = "http://localhost/family_chores/InsertList.php";
+    private string listsURL = "https://people.dsv.su.se/~nial0165/MAPP/InsertList.php";
 
     //Add stepTwo later on...
     public GameObject stepOne/*, stepTwo*/;
