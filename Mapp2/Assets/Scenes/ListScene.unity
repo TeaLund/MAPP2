@@ -4392,9 +4392,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430799248}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1e9d71cd2f19068468c2d8b7a3aacefe2278428f
 =======
+=======
+>>>>>>> parent of 6728f0c... 05-24 22:55
 --- !u!1 &1467698147 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1159286781635882, guid: 88860647f5bc18143be932cfc1280bca,
@@ -4411,6 +4414,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0eee3141cae7e43a30346db08ae304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+>>>>>>> parent of 6728f0c... 05-24 22:55
+=======
 >>>>>>> parent of 6728f0c... 05-24 22:55
 --- !u!1 &1470814716
 GameObject:
