@@ -51,14 +51,17 @@ public class TaskMenuPanel : MonoBehaviour {
     public void OkButton()
     {
         print("points " + taskPoints);
+        print("taskID " + taskID);
+        print("userID " + userID);
         WWWForm form = new WWWForm();
         form.AddField("idPost", userID);
-        form.AddField("completePost", 1);
-        //form.AddField("taskIDPost", taskID);
+        //form.AddField("completePost", 1);
+        form.AddField("taskIDPost", taskID);
         form.AddField("pointsPost", userPoints + taskPoints);
 
         WWW www = new WWW(url, form);
         //taskObj.GetComponent<TaskDisplay>().CompletedTask();
+        taskObj.GetComponent<TaskDisplay>().CompletedTask();
         gameObject.SetActive(false);
 
     }

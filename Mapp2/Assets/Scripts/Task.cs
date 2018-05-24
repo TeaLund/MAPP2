@@ -21,7 +21,7 @@ public class Task : MonoBehaviour
     private void Update()
     {
         if (isComplete == 1)
-            transform.GetComponent<TaskDisplay>().isTaskComplete = true;
+            transform.GetComponent<TaskDisplay>().CompletedTask();
     }
 
     public void completeButton(GameObject obj)

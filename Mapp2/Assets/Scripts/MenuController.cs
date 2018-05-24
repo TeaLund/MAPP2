@@ -90,8 +90,9 @@ public class MenuController : MonoBehaviour
     public void ToggleCompleteTaskPanel(GameObject taskObject)
     {
         completeTaskPanel.GetComponent<TaskMenuPanel>().Task(taskObject);
-        completePanelActive = !completePanelActive;
-        completeTaskPanel.SetActive(completePanelActive);
+        completeTaskPanel.SetActive(true);
+        //completePanelActive = !completePanelActive;
+        //completeTaskPanel.SetActive(completePanelActive);
 
         //ToggleButtons();
     }

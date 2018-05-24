@@ -23,16 +23,10 @@ public class TaskDisplay : MonoBehaviour {
         //iconImage.sprite = icons[task.iconNumber]
     }
 
-    private void Update()
-    {
-        if (isTaskComplete)
-            CompletedTask();
-    }
-
     public void CompletedTask()
     {
-        isTaskComplete = !isTaskComplete;
+        //isTaskComplete = !isTaskComplete;
 
-        completedTaskDisplay.SetActive(isTaskComplete);
+        completedTaskDisplay.SetActive(true);
     }
 }

@@ -17,7 +17,6 @@ public class TaskLoader : MonoBehaviour {
 
         WWW getTask = new WWW("https://people.dsv.su.se/~nial0165/MAPP/GetTask.php", taskForm);
         yield return getTask;
-
         string tasksDataString = getTask.text;
 
         tasksData = tasksDataString.Split(';').Select(x => x.Split('|')).ToArray();
@@ -25,7 +24,6 @@ public class TaskLoader : MonoBehaviour {
         GameObject newObj;
 
 
-        print(tasksData.Length);
         for (int i = 0; i < tasksData.GetLength(0) - 1; i++)
         {
             newObj = (GameObject)Instantiate(taskButtonPrefab, transform);

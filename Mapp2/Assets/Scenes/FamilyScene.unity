@@ -157,6 +157,7 @@ MonoBehaviour:
   exitPromptPanel: {fileID: 0}
   newListPanel: {fileID: 0}
   newTaskPanel: {fileID: 0}
+  completeTaskPanel: {fileID: 0}
 --- !u!224 &234818348 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224573549773578340, guid: 72c421fcff10df542b4b0a4afe20c2c5,
