@@ -226,7 +226,7 @@ MonoBehaviour:
   listID: 0
   taskName: 
   numberOfPoints: 0
-  iconNumber: 0
+  isComplete: 0
 --- !u!114 &114135438268603766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -558,6 +558,7 @@ MonoBehaviour:
   iconImage: {fileID: 114195841355101050}
   isCompleted: {fileID: 114439658456371380}
   completedTaskDisplay: {fileID: 1806597060537490}
+  isTaskComplete: 0
 --- !u!222 &222073977815395734
 CanvasRenderer:
   m_ObjectHideFlags: 1

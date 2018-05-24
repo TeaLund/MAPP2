@@ -53,6 +53,7 @@ public class TaskMenuPanel : MonoBehaviour {
         print("points " + taskPoints);
         WWWForm form = new WWWForm();
         form.AddField("idPost", userID);
+        form.AddField("completePost", 1);
         //form.AddField("taskIDPost", taskID);
         form.AddField("pointsPost", userPoints + taskPoints);
 
