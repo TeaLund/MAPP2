@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 114125050435385742}
   - component: {fileID: 114995840654847962}
   - component: {fileID: 114875848571461518}
+  - component: {fileID: 114280936120744484}
   m_Layer: 0
   m_Name: TaskButton
   m_TagString: Untagged
@@ -286,6 +287,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114280936120744484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159286781635882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0eee3141cae7e43a30346db08ae304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114334963265264754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,12 +400,12 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1159286781635882}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 114125050435385742}
+        m_MethodName: completeButton
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 1159286781635882}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

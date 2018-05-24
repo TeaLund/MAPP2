@@ -11,4 +11,17 @@ public class Task : MonoBehaviour
     public int numberOfPoints;
     public int iconNumber;
 
+    private MenuController menuController;
+
+    private void Start()
+    {
+        menuController = transform.parent.parent.parent.parent.parent.GetComponent<MenuController>();
+    }
+
+    public void completeButton(GameObject obj)
+    {
+        print(obj.name);
+        menuController.GetComponent<MenuController>().ToggleCompleteTaskPanel(obj);
+    }
+
 }

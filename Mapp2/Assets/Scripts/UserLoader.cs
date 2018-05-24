@@ -28,7 +28,7 @@ public class UserLoader : MonoBehaviour
         print("star Uppdate");
         userData = new WWW(url);
         yield return userData;
-        print(userData.text);
+        //print(userData.text);
         string userDataString = userData.text;
         users = userDataString.Split(';').Select(x => x.Split('|')).ToArray();
         print("print data");
