@@ -58,7 +58,10 @@ GameObject:
   - component: {fileID: 114125050435385742}
   - component: {fileID: 114995840654847962}
   - component: {fileID: 114875848571461518}
+<<<<<<< HEAD
   - component: {fileID: 114280936120744484}
+=======
+>>>>>>> 780be51d1a7375e57143ab483d28c1e785a8f504
   m_Layer: 0
   m_Name: TaskButton
   m_TagString: Untagged
@@ -400,12 +403,18 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
+<<<<<<< HEAD
       - m_Target: {fileID: 114125050435385742}
         m_MethodName: completeButton
         m_Mode: 2
+=======
+      - m_Target: {fileID: 1159286781635882}
+        m_MethodName: 
+        m_Mode: 1
+>>>>>>> 780be51d1a7375e57143ab483d28c1e785a8f504
         m_Arguments:
-          m_ObjectArgument: {fileID: 1159286781635882}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

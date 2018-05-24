@@ -12,8 +12,7 @@ public class TaskDisplay : MonoBehaviour {
     public Toggle isCompleted;
     public GameObject completedTaskDisplay;
 
-    [HideInInspector]
-    public bool isTaskComplete = false;
+    private bool isTaskComplete = false;
     private TaskMenuPanel completePanel;
 
     private void Start()

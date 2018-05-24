@@ -17,7 +17,7 @@ public class ListLoader : MonoBehaviour
     private IEnumerator LoadList()
     {
         //Set getList to the .php with the same name, then wait for it to load before proceeding
-        WWW getList = new WWW("https://people.dsv.su.se/~nial0165/MAPP/GetList.php");
+        WWW getList = new WWW("http://localhost/family_chores/GetList.php");
         yield return getList;
 
         //Receives data from the .php
@@ -46,7 +46,7 @@ public class ListLoader : MonoBehaviour
         listForm.AddField("listNamePost", listName);
 
         //Set getList to the .php with the same name, then wait for it to load before proceeding
-        WWW getListWithName = new WWW("https://people.dsv.su.se/~nial0165/MAPP/GetListWithName.php", listForm);
+        WWW getListWithName = new WWW("http://localhost/family_chores/GetListWithName.php", listForm);
         yield return getListWithName;
 
         //Receives data from the .php

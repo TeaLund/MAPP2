@@ -9,6 +9,7 @@ public class Task : MonoBehaviour
     public int listID;
     public string taskName;
     public int numberOfPoints;
+<<<<<<< HEAD
     public int isComplete;
 
     private MenuController menuController;
@@ -29,5 +30,8 @@ public class Task : MonoBehaviour
         print(obj.name);
         menuController.GetComponent<MenuController>().ToggleCompleteTaskPanel(obj);
     }
+=======
+    public int iconNumber;
+>>>>>>> 780be51d1a7375e57143ab483d28c1e785a8f504
 
 }

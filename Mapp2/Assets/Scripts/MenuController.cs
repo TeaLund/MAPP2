@@ -85,7 +85,7 @@ public class MenuController : MonoBehaviour
     //TaskScene
     public void CompleteTaskUserButton(GameObject userObject)
     {
-        completeTaskPanel.GetComponent<TaskMenuPanel>().User(userObject);
+        //completeTaskPanel .User(userObject);
     }
     public void ToggleCompleteTaskPanel(GameObject taskObject)
     {
@@ -94,7 +94,7 @@ public class MenuController : MonoBehaviour
         //completePanelActive = !completePanelActive;
         //completeTaskPanel.SetActive(completePanelActive);
 
-        //ToggleButtons();
+        ToggleButtons();
     }
 
     public void LoadMainMenuScene()
