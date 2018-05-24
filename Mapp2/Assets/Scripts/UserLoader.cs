@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class UserLoader : MonoBehaviour {
+public class UserLoader : MonoBehaviour
+{
 
     public string[][] users;
     public GameObject userPrefab;
@@ -11,7 +12,8 @@ public class UserLoader : MonoBehaviour {
     private WWW userData;
     //public Arraylst<GameObject> userObjects;
 
-    void Start() {
+    void Start()
+    {
         //WWW userData = new WWW("http://localhost/MAPP2_Users/UserData.php");
         userData = new WWW("https://people.dsv.su.se/~nial0165/MAPP/UserData.php");
 

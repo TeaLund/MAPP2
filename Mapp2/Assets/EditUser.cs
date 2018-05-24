@@ -63,7 +63,7 @@ public class EditUser : MonoBehaviour {
         inputIcon = iconSelected.index;
         Edit(id, userName, inputIcon, points);
         //listUpdate.UpdateUser(id);
-        StartCoroutine(listUpdate.GetComponent<UserLoader>().UpdateList());
+        //StartCoroutine(listUpdate.GetComponent<UserLoader>().UpdateList());
         print("EditUser " + id + userName + inputIcon + points);
         listUpdate.GetComponent<UserUpdate>().UpdateUserOffline(id, userName, inputIcon, points);
 

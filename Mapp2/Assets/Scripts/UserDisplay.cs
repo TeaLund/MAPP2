@@ -12,7 +12,7 @@ public class UserDisplay : MonoBehaviour {
 
     public Sprite[] icons = new Sprite[10];
 
-	void Start () {
+	void Update () {
         nameText.text = user.userName;
         pointsText.text = user.userPoints.ToString();
         iconImage.sprite = icons[user.userIconNumber];

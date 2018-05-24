@@ -16,12 +16,15 @@ public class UserUpdate : MonoBehaviour {
         userIcon = icon;
         userPoints = points;
 
-
+        Debug.Log(GetComponentsInChildren<User>().Length);
         //User childObj = transform.GetComponentInChildren<User>();
         foreach(Transform child in transform)
         {
-            User childObj = transform.GetComponentInChildren<User>();
-            if (child.GetComponent<User>().userID == ID)
+            if (child.GetComponent<User>() == null)
+                return;
+            User childObj = child.GetComponent<User>();
+            Debug.Log("Child" + childObj.name);
+            if (childObj.userID == ID)
             {
                 childObj.userName = name;
                 childObj.userIconNumber = icon;
