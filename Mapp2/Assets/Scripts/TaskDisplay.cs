@@ -12,7 +12,8 @@ public class TaskDisplay : MonoBehaviour {
     public Toggle isCompleted;
     public GameObject completedTaskDisplay;
 
-    private bool isTaskComplete = false;
+    [HideInInspector]
+    public bool isTaskComplete = false;
     private TaskMenuPanel completePanel;
 
     private void Start()
@@ -20,6 +21,12 @@ public class TaskDisplay : MonoBehaviour {
         nameText.text = task.taskName;
         numberOfPointsText.text = task.numberOfPoints.ToString();
         //iconImage.sprite = icons[task.iconNumber]
+    }
+
+    private void Update()
+    {
+        if (isTaskComplete)
+            CompletedTask();
     }
 
     public void CompletedTask()
