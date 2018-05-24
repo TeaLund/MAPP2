@@ -11,11 +11,10 @@ public class TaskLoader : MonoBehaviour {
 
     private IEnumerator Start()
     {
-
         WWWForm taskForm = new WWWForm();
         taskForm.AddField("listIDPost", PlayerPrefs.GetInt("ID"));
 
-        WWW getTask = new WWW("https://people.dsv.su.se/~nial0165/MAPP/GetTask.php", taskForm);
+        WWW getTask = new WWW("http://localhost/family_chores/GetTask.php", taskForm);
         yield return getTask;
 
         string tasksDataString = getTask.text;
@@ -24,9 +23,7 @@ public class TaskLoader : MonoBehaviour {
 
         GameObject newObj;
 
-
-        print(tasksData.Length);
-        for (int i = 0; i < tasksData.GetLength(0) - 1; i++)
+        for(int i = 0; i < tasksData.GetLength(0) - 1; i++)
         {
             newObj = (GameObject)Instantiate(taskButtonPrefab, transform);
 
@@ -35,7 +32,7 @@ public class TaskLoader : MonoBehaviour {
             newObjTask.listID = int.Parse(tasksData[i][1]);
             newObjTask.taskName = tasksData[i][2];
             newObjTask.numberOfPoints = int.Parse(tasksData[i][3]);
-            newObjTask.isComplete = int.Parse(tasksData[i][4]);
+            newObjTask.iconNumber = int.Parse(tasksData[i][4]);
         }
     }
 

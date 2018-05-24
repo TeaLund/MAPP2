@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class NewTask : MonoBehaviour
 {
-    private string tasksURL = "https://people.dsv.su.se/~nial0165/MAPP/InsertTask.php";
+    private string tasksURL = "http://localhost/family_chores/InsertTask.php";
 
     //Add stepThree later on...
     public GameObject stepOne, stepTwo/*, stepThree*/;
 
     public InputField stepOneInput;
-    public InputField stepTwoInput;
-    //public StarSelect stepTwoInput;
+    //public InputField stepTwoInput;
+    public StarSelect stepTwoInput;
 
     private string taskName;
     private int numberOfPoints;
@@ -26,7 +26,7 @@ public class NewTask : MonoBehaviour
     private void Start()
     {
         stepOneInput.onEndEdit.AddListener(SubmitString);
-        stepTwoInput.onEndEdit.AddListener(SubmitInt);
+        //stepTwoInput.onEndEdit.AddListener(SubmitInt);
     }
 
     public void ToggleStepOne()
@@ -57,8 +57,8 @@ public class NewTask : MonoBehaviour
 
     public void SubmitInt(string inputInt)
     {
-        numberOfPoints = int.Parse(inputInt);
-        //numberOfPoints = stepTwoInput.points;
+        //numberOfPoints = int.Parse(inputInt);
+        numberOfPoints = stepTwoInput.points;
         Debug.Log("poäng är " + numberOfPoints);
     }
 
@@ -79,12 +79,11 @@ public class NewTask : MonoBehaviour
     public void ClearInputField()
     {
         stepOneInput.text = null;
-        stepTwoInput.text = null;
+        //stepTwoInput.text = null;
     }
 
     private IEnumerator CreateNewTask()
     {
-        Debug.Log("poäng är " + numberOfPoints);
         WWWForm taskForm = new WWWForm();
         taskForm.AddField("listIDPost", PlayerPrefs.GetInt("ID"));
         taskForm.AddField("taskNamePost", taskName);
@@ -102,7 +101,7 @@ public class NewTask : MonoBehaviour
         ClearInputField();
 
         PlayerPrefs.SetInt("GetValue", 1);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     //Add more methods for stepThree later on...
