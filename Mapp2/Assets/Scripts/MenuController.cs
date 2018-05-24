@@ -13,10 +13,18 @@ public class MenuController : MonoBehaviour
     public GameObject newListPanel;
     public GameObject newTaskPanel;
 
-    private bool buttonsEnabled = true;
-    private bool exitPromptPanelActive = false;
-    private bool newListPanelActive = false;
-    private bool newTaskPanelActive = false;
+    private bool buttonsEnabled;
+    private bool exitPromptPanelActive;
+    private bool newListPanelActive;
+    private bool newTaskPanelActive;
+
+    private void Awake()
+    {
+        buttonsEnabled = true;
+        exitPromptPanelActive = false;
+        newListPanelActive = false;
+        newTaskPanelActive = false;
+}
 
     private void Update()
     {

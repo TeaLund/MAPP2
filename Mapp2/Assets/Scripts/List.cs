@@ -26,7 +26,7 @@ public class List : MonoBehaviour {
         PlayerPrefs.SetInt("ID", id);
         PlayerPrefs.SetInt("GetValue", 1);
 
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     public void LoadList(int id)
@@ -34,7 +34,7 @@ public class List : MonoBehaviour {
         PlayerPrefs.SetInt("ID", id);
         PlayerPrefs.SetInt("GetValue", 1);
 
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     private IEnumerator LoadData()
@@ -42,7 +42,7 @@ public class List : MonoBehaviour {
         WWWForm listForm = new WWWForm();
         listForm.AddField("listIDPost", id);
 
-        WWW getListData = new WWW("http://localhost/family_chores/GetListData.php", listForm);
+        WWW getListData = new WWW("https://people.dsv.su.se/~nial0165/MAPP/GetListData.php", listForm);
         yield return getListData;
 
         string listDataString = getListData.text;

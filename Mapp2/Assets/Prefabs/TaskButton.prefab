@@ -388,12 +388,12 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1159286781635882}
-        m_MethodName: 
+      - m_Target: {fileID: 114995840654847962}
+        m_MethodName: CompletedTask
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -614,8 +614,8 @@ RectTransform:
   - {fileID: 224709466939517986}
   - {fileID: 224533232827681374}
   - {fileID: 224433722276181952}
-  - {fileID: 224185384829296628}
   - {fileID: 224810301734092342}
+  - {fileID: 224185384829296628}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -636,7 +636,7 @@ RectTransform:
   m_Children:
   - {fileID: 224561710917090712}
   m_Father: {fileID: 224120529284244984}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -782,7 +782,7 @@ RectTransform:
   m_Children:
   - {fileID: 224440670906340544}
   m_Father: {fileID: 224120529284244984}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
