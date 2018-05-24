@@ -12,14 +12,19 @@ public class UserDisplay : MonoBehaviour {
 
     public Sprite[] icons = new Sprite[10];
 
-	void Update () {
+    void Update () {
         nameText.text = user.userName;
-        pointsText.text = user.userPoints.ToString();
         iconImage.sprite = icons[user.userIconNumber];
-
+        if(pointsText != null)
+            pointsText.text = user.userPoints.ToString();
         //print(user.userID);
         //print(user.userName);
         //print(user.userIconNumber);
         //print(user.userPoints);
+    }
+
+    public void CompletedTaskUser()
+    {
+
     }
 }

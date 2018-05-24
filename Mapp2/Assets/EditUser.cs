@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EditUser : MonoBehaviour {
 
@@ -19,7 +20,7 @@ public class EditUser : MonoBehaviour {
 
     private UserIconSelected iconSelected;
     public GameObject listUpdate;
-    //public UserUpdate update;
+    public UserUpdate update;
 
     private string EditUrl = "https://people.dsv.su.se/~nial0165/MAPP/UpdateUser.php";
     private string RemoveUrl = "https://people.dsv.su.se/~nial0165/MAPP/RemoveUser.php";
@@ -27,7 +28,7 @@ public class EditUser : MonoBehaviour {
     private void Start()
     {
         iconSelected = iconArray.GetComponent<UserIconSelected>();
-        //update = transform.GetComponent<UserUpdate>();
+        update = listUpdate.GetComponent<UserUpdate>();
 
     }
 
@@ -62,9 +63,7 @@ public class EditUser : MonoBehaviour {
         userName = inputName.text;
         inputIcon = iconSelected.index;
         Edit(id, userName, inputIcon, points);
-        //listUpdate.UpdateUser(id);
-        //StartCoroutine(listUpdate.GetComponent<UserLoader>().UpdateList());
-        print("EditUser " + id + userName + inputIcon + points);
+        update.UpdateUserOffline(id, userName, inputIcon, points);
         listUpdate.GetComponent<UserUpdate>().UpdateUserOffline(id, userName, inputIcon, points);
 
         bakgroundPanel.SetActive(false);
@@ -84,7 +83,8 @@ public class EditUser : MonoBehaviour {
 
         WWW www = new WWW(RemoveUrl, form);
 
-        StartCoroutine(listUpdate.GetComponent<UserLoader>().UpdateList());
+        //StartCoroutine(listUpdate.GetComponent<UserLoader>().UpdateList());
+        SceneManager.LoadScene(1);
         bakgroundPanel.SetActive(false);
         editUserPanel.SetActive(false);
     }

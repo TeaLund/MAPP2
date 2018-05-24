@@ -16,20 +16,17 @@ public class UserUpdate : MonoBehaviour {
         userIcon = icon;
         userPoints = points;
 
-        Debug.Log(GetComponentsInChildren<User>().Length);
         //User childObj = transform.GetComponentInChildren<User>();
-        foreach(Transform child in transform)
+        foreach (Transform child in this.transform)
         {
             if (child.GetComponent<User>() == null)
-                return;
+                continue;
             User childObj = child.GetComponent<User>();
-            Debug.Log("Child" + childObj.name);
             if (childObj.userID == ID)
             {
                 childObj.userName = name;
                 childObj.userIconNumber = icon;
                 childObj.userPoints = points;
-                print("UserUpdate hittade user" + childObj.userName);
             }
         }
     }

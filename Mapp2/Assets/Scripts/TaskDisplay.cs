@@ -13,6 +13,7 @@ public class TaskDisplay : MonoBehaviour {
     public GameObject completedTaskDisplay;
 
     private bool isTaskComplete = false;
+    private TaskMenuPanel completePanel;
 
     private void Start()
     {
@@ -27,5 +28,4 @@ public class TaskDisplay : MonoBehaviour {
 
         completedTaskDisplay.SetActive(isTaskComplete);
     }
-
 }

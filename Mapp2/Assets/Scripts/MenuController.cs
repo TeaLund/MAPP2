@@ -12,11 +12,22 @@ public class MenuController : MonoBehaviour
     public GameObject exitPromptPanel;
     public GameObject newListPanel;
     public GameObject newTaskPanel;
+    public GameObject completeTaskPanel;
 
-    private bool buttonsEnabled = true;
-    private bool exitPromptPanelActive = false;
-    private bool newListPanelActive = false;
-    private bool newTaskPanelActive = false;
+    private bool buttonsEnabled;
+    private bool exitPromptPanelActive;
+    private bool newListPanelActive;
+    private bool newTaskPanelActive;
+    private bool completePanelActive;
+
+    private void Awake()
+    {
+        buttonsEnabled = true;
+        exitPromptPanelActive = false;
+        newListPanelActive = false;
+        newTaskPanelActive = false;
+        completePanelActive = false;
+    }
 
     private void Update()
     {
@@ -69,6 +80,20 @@ public class MenuController : MonoBehaviour
         {
             button.interactable = buttonsEnabled;
         }
+    }
+
+    //TaskScene
+    public void CompleteTaskUserButton(GameObject userObject)
+    {
+        //completeTaskPanel .User(userObject);
+    }
+    public void ToggleCompleteTaskPanel(GameObject taskObject)
+    {
+        completeTaskPanel.GetComponent<TaskMenuPanel>().Task(taskObject);
+        completePanelActive = !completePanelActive;
+        completeTaskPanel.SetActive(completePanelActive);
+
+        ToggleButtons();
     }
 
     public void LoadMainMenuScene()

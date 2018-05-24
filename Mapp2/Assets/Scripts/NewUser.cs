@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NewUser : MonoBehaviour {
 
@@ -10,15 +11,17 @@ public class NewUser : MonoBehaviour {
     public GameObject iconArray;
     public GameObject bakgroundPanel;
     public int inputIcon;
+    public UserLoader listUpdate;
 
     //private string url = "http://localhost/MAPP2_Users/InsertUser.php";
     private string url = "https://people.dsv.su.se/~nial0165/MAPP/InsertUser.php";
     private UserIconSelected iconSelected;
-    public UserLoader listUpdate;
+    private UserUpdate update;
 
     // Use this for initialization
     void Start () {
         iconSelected = iconArray.GetComponent<UserIconSelected>();
+        update = listUpdate.GetComponent<UserUpdate>();
     }
 
     public void OpenUserPanel()
@@ -39,7 +42,8 @@ public class NewUser : MonoBehaviour {
         string name = inputName.text;
         inputIcon = iconSelected.index;
         CreateUser(name, inputIcon);
-        listUpdate.UpdateList();
+        //StartCoroutine(listUpdate.GetComponent<UserLoader>().UpdateList());
+        SceneManager.LoadScene(1);
         bakgroundPanel.SetActive(false);
         newUserPanel.SetActive(false);
     }
