@@ -24,8 +24,8 @@ public class TaskDisplay : MonoBehaviour {
 
     public void CompletedTask()
     {
-        //isTaskComplete = !isTaskComplete;
+        isTaskComplete = !isTaskComplete;
 
-        completedTaskDisplay.SetActive(true);
+        completedTaskDisplay.SetActive(isTaskComplete);
     }
 }

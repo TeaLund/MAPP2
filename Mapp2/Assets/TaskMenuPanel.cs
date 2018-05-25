@@ -40,28 +40,11 @@ public class TaskMenuPanel : MonoBehaviour {
 
     public void OkButton()
     {
-<<<<<<< HEAD
-        print("points " + taskPoints);
-        print("taskID " + taskID);
-        print("userID " + userID);
-        WWWForm form = new WWWForm();
-        form.AddField("idPost", userID);
-        //form.AddField("completePost", 1);
-        form.AddField("taskIDPost", taskID);
-        form.AddField("pointsPost", userPoints + taskPoints);
-
-        WWW www = new WWW(url, form);
-        //taskObj.GetComponent<TaskDisplay>().CompletedTask();
-        taskObj.GetComponent<TaskDisplay>().CompletedTask();
-        gameObject.SetActive(false);
-
-=======
         WWWForm form = new WWWForm();
         form.AddField("idPost", userID);
         form.AddField("taskIDPost", taskID);
         form.AddField("pointsPost", taskPoints);
 
         WWW www = new WWW(url, form);
->>>>>>> 780be51d1a7375e57143ab483d28c1e785a8f504
     }
 }

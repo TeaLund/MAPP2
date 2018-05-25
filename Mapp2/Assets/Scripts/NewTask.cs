@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class NewTask : MonoBehaviour
 {
-    private string tasksURL = "http://localhost/family_chores/InsertTask.php";
+    private string tasksURL = "https://people.dsv.su.se/~nial0165/MAPP/InsertTask.php";
 
     //Add stepThree later on...
     public GameObject stepOne, stepTwo/*, stepThree*/;
@@ -101,7 +101,7 @@ public class NewTask : MonoBehaviour
         ClearInputField();
 
         PlayerPrefs.SetInt("GetValue", 1);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     //Add more methods for stepThree later on...

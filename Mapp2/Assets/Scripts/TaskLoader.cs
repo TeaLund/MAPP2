@@ -14,20 +14,16 @@ public class TaskLoader : MonoBehaviour {
         WWWForm taskForm = new WWWForm();
         taskForm.AddField("listIDPost", PlayerPrefs.GetInt("ID"));
 
-        WWW getTask = new WWW("http://localhost/family_chores/GetTask.php", taskForm);
+        WWW getTask = new WWW("https://people.dsv.su.se/~nial0165/MAPP/GetTask.php", taskForm);
         yield return getTask;
+
         string tasksDataString = getTask.text;
 
         tasksData = tasksDataString.Split(';').Select(x => x.Split('|')).ToArray();
 
         GameObject newObj;
 
-<<<<<<< HEAD
-
-        for (int i = 0; i < tasksData.GetLength(0) - 1; i++)
-=======
         for(int i = 0; i < tasksData.GetLength(0) - 1; i++)
->>>>>>> 780be51d1a7375e57143ab483d28c1e785a8f504
         {
             newObj = (GameObject)Instantiate(taskButtonPrefab, transform);
 

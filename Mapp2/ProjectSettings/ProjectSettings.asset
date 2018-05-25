@@ -7,11 +7,11 @@ PlayerSettings:
   productGUID: 5c6941c74af5a4047ab7953d4d882754
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Group14
   productName: Mapp2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -157,7 +157,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.Group14.Mapp2
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -259,7 +260,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: e2caf80f1c578444b819a8180e3ea419, type: 3}
+      m_Icon: {fileID: 2800000, guid: ff097f9e946535d42a48c44d219b17e1, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
