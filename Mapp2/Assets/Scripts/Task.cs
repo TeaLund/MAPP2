@@ -9,6 +9,25 @@ public class Task : MonoBehaviour
     public int listID;
     public string taskName;
     public int numberOfPoints;
-    public int iconNumber;
+    public int isComplete;
+
+    private MenuController menuController;
+
+    private void Start()
+    {
+        menuController = transform.parent.parent.parent.parent.parent.GetComponent<MenuController>();
+    }
+
+    private void Update()
+    {
+        if (isComplete == 1)
+            transform.GetComponent<TaskDisplay>().CompletedTask();
+    }
+
+    public void completeButton(GameObject obj)
+    {
+        print(obj.name);
+        menuController.GetComponent<MenuController>().ToggleCompleteTaskPanel(obj);
+    }
 
 }

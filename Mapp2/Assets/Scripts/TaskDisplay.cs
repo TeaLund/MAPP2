@@ -12,7 +12,7 @@ public class TaskDisplay : MonoBehaviour {
     public Toggle isCompleted;
     public GameObject completedTaskDisplay;
 
-    private bool isTaskComplete = false;
+    //private bool isTaskComplete = false;
     private TaskMenuPanel completePanel;
 
     private void Start()
@@ -24,8 +24,7 @@ public class TaskDisplay : MonoBehaviour {
 
     public void CompletedTask()
     {
-        isTaskComplete = !isTaskComplete;
-
-        completedTaskDisplay.SetActive(isTaskComplete);
+        //isTaskComplete = !isTaskComplete;
+        completedTaskDisplay.SetActive(true);
     }
 }

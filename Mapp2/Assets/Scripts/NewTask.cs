@@ -12,8 +12,8 @@ public class NewTask : MonoBehaviour
     public GameObject stepOne, stepTwo/*, stepThree*/;
 
     public InputField stepOneInput;
-    //public InputField stepTwoInput;
-    public StarSelect stepTwoInput;
+    public InputField stepTwoInput;
+    //public StarSelect stepTwoInput;
 
     private string taskName;
     private int numberOfPoints;
@@ -26,7 +26,7 @@ public class NewTask : MonoBehaviour
     private void Start()
     {
         stepOneInput.onEndEdit.AddListener(SubmitString);
-        //stepTwoInput.onEndEdit.AddListener(SubmitInt);
+        stepTwoInput.onEndEdit.AddListener(SubmitInt);
     }
 
     public void ToggleStepOne()
@@ -57,8 +57,8 @@ public class NewTask : MonoBehaviour
 
     public void SubmitInt(string inputInt)
     {
-        //numberOfPoints = int.Parse(inputInt);
-        numberOfPoints = stepTwoInput.points;
+        numberOfPoints = int.Parse(inputInt);
+        //numberOfPoints = stepTwoInput.points;
         Debug.Log("poäng är " + numberOfPoints);
     }
 
@@ -79,11 +79,12 @@ public class NewTask : MonoBehaviour
     public void ClearInputField()
     {
         stepOneInput.text = null;
-        //stepTwoInput.text = null;
+        stepTwoInput.text = null;
     }
 
     private IEnumerator CreateNewTask()
     {
+        Debug.Log("poäng är " + numberOfPoints);
         WWWForm taskForm = new WWWForm();
         taskForm.AddField("listIDPost", PlayerPrefs.GetInt("ID"));
         taskForm.AddField("taskNamePost", taskName);

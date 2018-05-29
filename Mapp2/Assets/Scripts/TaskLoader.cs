@@ -32,7 +32,8 @@ public class TaskLoader : MonoBehaviour {
             newObjTask.listID = int.Parse(tasksData[i][1]);
             newObjTask.taskName = tasksData[i][2];
             newObjTask.numberOfPoints = int.Parse(tasksData[i][3]);
-            newObjTask.iconNumber = int.Parse(tasksData[i][4]);
+            //newObjTask.iconNumber = int.Parse(tasksData[i][4]);
+            newObjTask.isComplete = int.Parse(tasksData[i][4]);
         }
     }
 
