@@ -56,6 +56,9 @@ public class TaskMenuPanel : MonoBehaviour
 
         WWW www = new WWW(url, form);
         taskObj.GetComponent<TaskDisplay>().CompletedTask();
+
+        print(www.error);
+
         gameObject.SetActive(false);
     }
 }

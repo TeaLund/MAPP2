@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -39,6 +39,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -54,11 +55,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -163,6 +163,7 @@ MonoBehaviour:
   newListPanel: {fileID: 0}
   newTaskPanel: {fileID: 0}
   completeTaskPanel: {fileID: 0}
+  removeListPanel: {fileID: 0}
 --- !u!224 &234818348 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224573549773578340, guid: 72c421fcff10df542b4b0a4afe20c2c5,
@@ -3264,7 +3265,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1758987441}
   m_HandleRect: {fileID: 1758987440}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3947,7 +3948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076293945, y: 282.19995}
+  m_AnchoredPosition: {x: 0, y: 282.19995}
   m_SizeDelta: {x: -300, y: 755.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1261857290
@@ -7487,7 +7488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000017219387}
+  m_AnchoredPosition: {x: 0, y: -0.0000011500069}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1826522071
@@ -7502,6 +7503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userPrefab: {fileID: 1831889153035778, guid: 72c421fcff10df542b4b0a4afe20c2c5, type: 2}
+  podiumUserPrefab: {fileID: 0}
 --- !u!114 &1826522072
 MonoBehaviour:
   m_ObjectHideFlags: 0

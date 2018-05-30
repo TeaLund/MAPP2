@@ -13,12 +13,14 @@ public class MenuController : MonoBehaviour
     public GameObject newListPanel;
     public GameObject newTaskPanel;
     public GameObject completeTaskPanel;
+    public GameObject removeListPanel;
 
     private bool buttonsEnabled;
     private bool exitPromptPanelActive;
     private bool newListPanelActive;
     private bool newTaskPanelActive;
     private bool completePanelActive;
+    private bool removeListPanelActive;
 
     private void Awake()
     {
@@ -94,6 +96,14 @@ public class MenuController : MonoBehaviour
         completeTaskPanel.SetActive(completePanelActive);
 
         //ToggleButtons();
+    }
+
+    public void ToggleRemoveListPanel()
+    {
+        removeListPanelActive = !removeListPanelActive;
+        removeListPanel.SetActive(removeListPanelActive);
+
+        ToggleButtons();
     }
 
     public void LoadMainMenuScene()

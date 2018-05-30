@@ -7,30 +7,36 @@ public class NewList : MonoBehaviour
 {
     private string listsURL = "https://people.dsv.su.se/~nial0165/MAPP/InsertList.php";
 
-    //Add stepTwo later on...
-    public GameObject stepOne/*, stepTwo*/;
+    public GameObject stepOne;
+    public GameObject stepTwo;
+    public UserIconSelected iconSelected;
 
     private string listName;
-    //private int iconNumber;
+    private int iconNumber;
 
     private bool stepOneActive = true;
-    //private bool stepTwoActive = false;
+    private bool stepTwoActive = false;
 
     private InputField input;
 
-    public void ToggleStepOne()
-    {
-        stepOneActive = !stepOneActive;
+    //public void ToggleStepOne()
+    //{
+    //    stepOneActive = !stepOneActive;
 
-        gameObject.SetActive(stepOneActive);
-    }
+    //    gameObject.SetActive(stepOneActive);
+    //    print("toggle step one");
+    //    print(stepOneActive);
+    //}
 
-    /*public void ToggleStepTwo()
-    {
-        stepTwoActive = !stepTwoActive;
+    //public void ToggleStepTwo()
+    //{
+    //    stepTwoActive = !stepTwoActive;
         
-        gameObject.SetActive(stepTwoActive);
-    }*/
+    //    gameObject.SetActive(stepTwoActive);
+    //    print("toggle step two");
+    //    print("steptwo"+stepTwoActive);
+    //    print("stepone" + stepOneActive);
+    //}
 
     private void Awake()
     {
@@ -43,9 +49,35 @@ public class NewList : MonoBehaviour
         listName = inputText;
     }
 
+    public void getIconNumber()
+    {
+        iconSelected.index = iconNumber;
+        print(iconNumber);
+        StartCoroutine(CreateNewList());
+    }
+
     public void ConfirmButton()
     {
-        StartCoroutine(CreateNewList());
+        //if (stepOneActive)
+        //{
+        //    ToggleStepOne();
+        //    ToggleStepTwo();
+        //    ClearInputField();
+        //}
+        //else if (stepTwoActive)
+        //{
+        //    StartCoroutine(CreateNewList());
+        //}
+
+        if (stepOne.activeSelf)
+        {
+            stepOne.SetActive(false);
+            stepTwo.SetActive(true);
+        }
+        else
+        {
+            getIconNumber();
+        }
     }
 
     public void ClearInputField()
@@ -57,7 +89,7 @@ public class NewList : MonoBehaviour
     {
         WWWForm listForm = new WWWForm();
         listForm.AddField("listNamePost", listName);
-        //listForm.AddField("iconNumberPost", iconNumber);
+        listForm.AddField("iconNumberPost", iconNumber);
 
         WWW listData = new WWW(listsURL, listForm);
         yield return listData;

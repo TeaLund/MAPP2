@@ -37,6 +37,14 @@ public class List : MonoBehaviour {
         SceneManager.LoadScene(3);
     }
 
+    public void RemoveList()
+    {
+        WWWForm removeForm = new WWWForm();
+        removeForm.AddField("IDPost", id);
+        WWW www = new WWW("https://people.dsv.su.se/~nial0165/MAPP/RemoveList.php", removeForm);
+        SceneManager.LoadScene(0);
+    }
+
     private IEnumerator LoadData()
     {
         WWWForm listForm = new WWWForm();

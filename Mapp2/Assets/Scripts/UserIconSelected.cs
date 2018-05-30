@@ -22,5 +22,6 @@ public class UserIconSelected : MonoBehaviour {
     public void OnClick(int buttonIndex)
     {
         index = buttonIndex;
+        print(buttonIndex);
     }
 }
