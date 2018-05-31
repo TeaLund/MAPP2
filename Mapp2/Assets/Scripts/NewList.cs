@@ -12,7 +12,7 @@ public class NewList : MonoBehaviour
     public UserIconSelected iconSelected;
 
     private string listName;
-    private int iconNumber;
+    private int iconNumber = -1;
 
     private bool stepOneActive = true;
     private bool stepTwoActive = false;
@@ -51,7 +51,7 @@ public class NewList : MonoBehaviour
 
     public void getIconNumber()
     {
-        iconSelected.index = iconNumber;
+        iconNumber = iconSelected.index;
         print(iconNumber);
         StartCoroutine(CreateNewList());
     }

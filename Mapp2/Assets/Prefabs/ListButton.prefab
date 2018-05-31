@@ -127,7 +127,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: List Name
+  m_Text: 
 --- !u!114 &114221650978239550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -248,6 +248,17 @@ MonoBehaviour:
   list: {fileID: 114137906601210948}
   nameText: {fileID: 114185845031604466}
   iconImage: {fileID: 114242556142163764}
+  icons:
+  - {fileID: 21300000, guid: 4b193db81d300d24aa3ba09bb8f5d476, type: 3}
+  - {fileID: 21300000, guid: 1452cdc2ac8623144a5f942277de9fc0, type: 3}
+  - {fileID: 21300000, guid: f5da76300c1452042a77080043a15dea, type: 3}
+  - {fileID: 21300000, guid: b32715f29ef70b145ad75778cf0d96a3, type: 3}
+  - {fileID: 21300000, guid: 4a70357b955822d4998ba230069b44f2, type: 3}
+  - {fileID: 21300000, guid: 805b149bce4b57f4d86b49a4b7786318, type: 3}
+  - {fileID: 21300000, guid: b78a28756cd336a4985f00dfc8e1cc3b, type: 3}
+  - {fileID: 21300000, guid: 9c6ec59cc52543f46b59a5a0047b6479, type: 3}
+  - {fileID: 21300000, guid: 53c99048ea8728841a15b2b05a5aeff3, type: 3}
+  - {fileID: 21300000, guid: 170ba0139f6665a4fb854ce499689ef8, type: 3}
 --- !u!222 &222068358667183402
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -280,7 +291,7 @@ RectTransform:
   m_GameObject: {fileID: 1683834695128720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7407753, y: 0.7407753, z: 0.7407753}
   m_Children: []
   m_Father: {fileID: 224163346381233370}
   m_RootOrder: 1

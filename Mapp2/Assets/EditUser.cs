@@ -10,6 +10,8 @@ public class EditUser : MonoBehaviour {
     public GameObject editUserPanel;
     public GameObject iconArray;
     public GameObject bakgroundPanel;
+    public GameObject editStep;
+    public GameObject removeStep;
 
     //[HideInInspector]
     public int id;
@@ -60,14 +62,21 @@ public class EditUser : MonoBehaviour {
 
     public void OkButton()
     {
-        userName = inputName.text;
-        inputIcon = iconSelected.index;
-        Edit(id, userName, inputIcon, points);
-        update.UpdateUserOffline(id, userName, inputIcon, points);
-        listUpdate.GetComponent<UserUpdate>().UpdateUserOffline(id, userName, inputIcon, points);
+
+        if (editStep.activeSelf)
+        {
+            userName = inputName.text;
+            inputIcon = iconSelected.index;
+            Edit(id, userName, inputIcon, points);
+            update.UpdateUserOffline(id, userName, inputIcon, points);
+            listUpdate.GetComponent<UserUpdate>().UpdateUserOffline(id, userName, inputIcon, points);
+        }
+        else
+            Remove();
 
         bakgroundPanel.SetActive(false);
         editUserPanel.SetActive(false);
+
     }
 
     public void CloseButton()
@@ -78,6 +87,13 @@ public class EditUser : MonoBehaviour {
 
     public void RemoveButton()
     {
+        editStep.SetActive(false);
+        removeStep.SetActive(true);
+    }
+
+    public void Remove()
+    {
+
         WWWForm form = new WWWForm();
         form.AddField("IDPost", id);
 
